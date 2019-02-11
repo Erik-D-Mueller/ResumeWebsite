@@ -1,0 +1,136 @@
+body {
+  background-color: powderblue;
+}
+h1 {
+	
+  color: blue;
+  
+}
+
+
+p {
+  
+  color: green;
+  
+}
+
+
+ div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+
+
+
+/*
+
+This is how we create animations:+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+In the below example, the rectangle has id of "rect", then in the style element we call rect and we apply an animation with the name colorfull for 3 seconds, then 
+the instructions for the abnimation are in the keyframes chunk.  Keyframes is a tool used by CSS, 0% refers to the beginning of the animation, 100% refers to the end
+of the animation.  It transitions between the values given.
+
+*/
+
+
+  #rec0 {
+  
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+
+
+
+
+@keyframes colorful {
+  
+  0% {
+    background-color: blue;
+  }
+  
+  100% {
+    background-color: green;
+  } 
+
+}
+
+
+
+
+
+  button {
+    border-radius: 25px;
+    color: white;
+    background-color: tan;
+    padding: 5px 10px 8px 10px;
+  }
+  
+ 
+  /* The below animation makes the button change color and stay as the end color when hovered over */
+  
+  
+  button:hover {
+    animation-name: backgroundColorHover;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  
+  @keyframes backgroundColorHover {
+    100% {
+    background-color: #4791d0;
+    }
+
+  }
+
+
+
+
+
+
+/*
+
+The below animation makes a rectangle move around
+
+*/
+
+#rec1 {
+	animation-name: moveDown;
+	animation-duration: 4s;
+	
+}
+
+
+@keyframes moveDown {
+  0% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+  }
+  
+  50% {
+    background-color: green;
+    top: 500px;
+    left: 250px;
+  }
+  
+  100% {
+    background-color: yellow;
+    top: 0px;
+    left: -250px;
+  }
+}
+
+
+
+
+
+
+
+
